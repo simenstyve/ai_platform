@@ -1,7 +1,7 @@
 # Welcome!
 And thank you for applying to join the AI Platform team!
 
-The task you are about to complete is a simplified version the kind of work carried out by the AI Platform team. On this occasion, the requirement is to build a tool that enables the migration of prompts from a local environment to cloud storage.
+The task you are about to complete is a simplified version of the kind of work carried out by the AI Platform team. On this occasion, the requirement is to build a tool that enables the migration of prompts from a local environment to cloud storage.
 
 You have a choice of two options for completing the task:
 * **In-person**: Building the feature while pairing with one of us. If this is how you wish to proceed, just make sure to build the environment and check that you can successfully run the commands under [Prerequisites](#prerequisites) and [Local Development Environment Setup](#local-development-environment-setup) prior to the pairing session.
