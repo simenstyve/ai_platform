@@ -1,0 +1,4 @@
+.venv
+volume
+*.egg-info
+__pycache__
