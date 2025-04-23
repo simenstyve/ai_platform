@@ -86,6 +86,8 @@ python src/prompt_service/sync.py 'llm_chat'
 2. All tests must pass.
 3. Formatting and linting checks must be run and issues addressed.
 
+**NOTE**: Prompt versioning, and migrating from one version to another (similarily to database migrations), are out of scope of this task. This task is purely about synchronising local and remote prompt files.
+
 ## Repository Contents
 - `.flake8` settings for flake8
 - `.gitignore`
@@ -105,6 +107,16 @@ python src/prompt_service/sync.py 'llm_chat'
   - `/prompt_service`
     - `sync.py` the entry point for the prompt migration tool
   - `main.py` a CLI tool that calls the LLM Chat client
+- `/tests`
+  - `conftest.py`
+  - `/integration`
+    - `test_ai_platform.py` a failing test that uses S3 on LocalStack, the migration tool, and the chat client
+  - `/unit`
+    - `/aws`
+      - `test_s3.py` tests attributes of the S3 client connected to LocalStack
+    - `/prompt_service`
+      - `test_sync.py` failing tests for the migration tool's expected behaviour
+    - `test_main.py` test that the main entry point passes a message to the chat client
 
 ## Formatting & Linting
 1. Sort imports:
