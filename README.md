@@ -8,6 +8,11 @@ You have a choice of two options for completing the task:
 * **Take-home**: Building the feature in your own time, before sharing it with us. If you choose this option, please start by completing [Prerequisites](#prerequisites) and [Local Development Environment Setup](#local-development-environment-setup), then continue to [Take-Home Task Instructions](#take-home-task-instructions).
 
 ## Prerequisites
+### Python 3.10+
+- [Mac](https://www.python.org/downloads/macos/)
+- [Windows](https://www.python.org/downloads/windows/)
+- [Other Platforms](https://www.python.org/download/other/)
+
 ### Docker
 - Install Docker Desktop or another Docker engine.
   - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
@@ -29,6 +34,10 @@ You have a choice of two options for completing the task:
    ```bash
    python -m venv .venv
    ```
+   If the above fails with `command not found: python`, try running:
+   ```bash
+   python3 -m venv .venv
+   ```
 2. Activate the virtual environment:
    ```bash
    source .venv/bin/activate
@@ -46,7 +55,12 @@ You have a choice of two options for completing the task:
    python src/main.py 'Hello world!'
    ```
 
-   You should see logs similar to:
+   If running the main script fails with `ModuleNotFoundError: No module named 'src'`, you may need to set the project root on the Python path, e.g.:
+   ```bash
+   export PYTHONPATH="$PWD"
+   ```
+
+   After successfully running the main script, you should see logs similar to:
    ```
    INFO:__main__:Sending message to LLM chat client: Hello world!
    INFO:__main__:Creating bucket 'ai-platform'
@@ -54,11 +68,6 @@ You have a choice of two options for completing the task:
    User prompt: User prompt not found on ai-platform
    Message: Hello world!
    ``` 
-
-   If running the main script fails, you may need to set the project root on the Python path, e.g.:
-   ```bash
-   export PYTHONPATH="$PWD"
-   ```
 6. Run tests (3 tests should pass, 4 should fail):
    ```bash
    pytest .
