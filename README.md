@@ -78,7 +78,7 @@ python src/prompt_service/sync.py 'llm_chat'
 ### Requirements
 1. Given an execution of the prompt service's sync migration tool triggered by running `python src/prompt_service/sync.py 'llm_chat'`:
    1. If the `ai-platform` bucket does not exist, then it is created.
-   2. Local prompt files in `/src/features/prompts/` are compared with the prompt files stored on the S3 bucket `ai-platform` in the `llm_chat` folder:
+   2. Local prompt files in `/src/features/llm_chat/prompts/` are compared with the prompt files stored on the S3 bucket `ai-platform` in the `llm_chat` folder:
       1. Files that **exist on the S3 bucket**, but **do not exist locally**, will be deleted from S3.
       2. Files that **exist locally**, but **do not exist on the S3 bucket**, will be uploaded to S3.
       3. Files that **exist both locally and on S3**, but have **different contents**, will be uploaded from the local environment to S3.
