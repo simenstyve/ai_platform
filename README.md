@@ -68,7 +68,7 @@ You have a choice of two options for completing the task:
    User prompt: User prompt not found on ai-platform
    Message: Hello world!
    ``` 
-6. Run tests (3 tests should pass, 4 should fail):
+6. Run tests (3 tests should pass, 1 should fail):
    ```bash
    pytest .
    ```
@@ -123,8 +123,6 @@ python src/prompt_service/sync.py 'llm_chat'
   - `/unit`
     - `/aws`
       - `test_s3.py` tests attributes of the S3 client connected to LocalStack
-    - `/prompt_service`
-      - `test_sync.py` failing tests for the migration tool's expected behaviour
     - `test_main.py` test that the main entry point passes a message to the chat client
 
 ## Formatting & Linting
