@@ -94,6 +94,7 @@ python src/prompt_service/sync.py 'llm_chat'
    3. The `ai-platform` S3 bucket will contain the keys `llm_chat/system_prompt.txt` and `llm_chat/user_prompt.txt` With contents `A test system prompt.` and `A test user prompt.` respectively.
 2. All tests must pass.
 3. Formatting and linting checks must be run and issues addressed.
+4. Return the completed task as a zip file (do not include your local environment file, or any other runtime- or IDE-generated files, in the zip)
 
 **NOTE**: Prompt versioning, and migrating from one version to another (similarily to database migrations), are out of scope of this task. This task is purely about synchronising local and remote prompt files.
 
