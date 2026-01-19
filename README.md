@@ -1,3 +1,4 @@
+HEAD
 # Welcome!
 And thank you for applying to join the AI Platform team!
 
@@ -139,3 +140,5 @@ python src/prompt_service/sync.py 'llm_chat'
    ```bash
    flake8 .
    ```
+=======
+
